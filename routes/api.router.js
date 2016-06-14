@@ -1,11 +1,8 @@
 'use strict';
 
 const router = require('express').Router();
-// const ctrl = require('')
-router.post('/send', function(req, res) {
-  console.log('oi');
+const ctrl = require('../controllers/index')
 
-  res.sendStatus(201);
-});
+router.post('/send', ctrl.Api);
 
 module.exports = router;

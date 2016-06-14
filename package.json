@@ -1,0 +1,23 @@
+{
+  "name": "node-push-server-apn-gcm",
+  "version": "1.0.0",
+  "description": "Node Server APN and GCM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfzer44/node-push-server-apn-gcm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolfzer44/node-push-server-apn-gcm/issues"
+  },
+  "homepage": "https://github.com/wolfzer44/node-push-server-apn-gcm#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}

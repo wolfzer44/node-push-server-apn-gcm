@@ -2,20 +2,19 @@
 
 function pushRouter (req, res, next) {
 
-  if(!req.body.devices) {
-    return res.sendStatus(500);
-  }
+  // console.log(req.body.devices);
+  let devices = req.body.devices;
 
   function isAndroid(value) {
-    return value.os.toLowerCase() === "android";
+    return value.token.length > 64;
   }
 
   function isIOS(value) {
-    return value.os.toLowerCase() === "ios";
+    return value.token.length === 64;
   }
 
-  let onlyTokensAndroid = sample.filter(isAndroid);
-  let onlyTokensIOS = sample.filter(isIOS);
+  let onlyTokensAndroid = devices.filter(isAndroid);
+  let onlyTokensIOS = devices.filter(isIOS);
 
   let android = onlyTokensAndroid.map(function(token) {
     return token.token;

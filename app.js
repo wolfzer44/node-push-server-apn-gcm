@@ -17,8 +17,6 @@ app.use(bodyParser.json())
 
 app.use('/api/v1/', cors(), midds.Origin, midds.PushRouter, routes.Api);
 
-// console.log(env)
-
 const cert = fs.readFileSync('./ssl/cert.crt', 'utf8');
 const key = fs.readFileSync('./ssl/key.key', 'utf8');
 
@@ -26,7 +24,7 @@ const ssl = {cert: cert, key: key};
 const port = 9000;
 
 if(process.env.NODE_ENV === 'development') {
-  app.listen(9000, function() {
+  app.listen(port, function() {
     console.log('listend in: ' + port);
   });
 }

@@ -19,7 +19,10 @@
   "dependencies": {
     "apn": "^1.7.6",
     "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^7.0.1",
     "node-gcm": "^0.14.3"
   }
 }
